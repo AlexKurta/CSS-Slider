@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Слайдер</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="favicon.png" type="image/png">
+	<style type="text/css">
+		.slider {
+			margin: 20px auto;
+			width: 890px;
+			position: relative;			
+		}
+		input {
+			display: none;
+		}
+		.tab, .botton {
+			display: inline-block;
+		}
+		.botton {					
+			width: 164px;
+			height: 92px;
+			margin: 490px 5px 0 5px;
+			opacity: 0.5;
+			cursor: pointer;									
+		}
+		.content {
+			display: none;
+			position: absolute;
+			height: 461px;
+			left: 35px;
+			top: 0;
+			box-shadow: 15px 10px 30px rgba(0, 0, 0, 0.55);
+			animation: bigimg 0.5s linear 1;
+		}
+		.content ~ img {
+			animation: scale infinite linear;
+		}
+		.tab :checked + .botton + .content {
+			display: block;			
+		}
+		.tab :checked + .botton {			
+			opacity: 1;
+			transition: 0.5s;
+			transform: scale(1.05);
+		}
+		.botton:hover {
+			transform: scale(1.05);
+			transition: 0.5s;
+			opacity: 0.7;
+		}
+		@keyframes bigimg {
+  			from {
+    			transform: scale(1.1);
+    			opacity: 0;
+  			}
+  			to {
+  				transform: scale(1);
+  				opacity: 1;
+  			}
+  		}
+	</style>
+</head>
+	<body>
+		<div class="slider">
+
+			<div class="tab">
+				<input type="radio" name="slide" id="s1" checked="">
+				<label for="s1" class="botton"><img src="images/img11.jpg"></label>
+				<div class="content">
+					<img src="images/img1.jpg" alt="Изображение 1">
+				</div>
+			</div>
+
+			<div class="tab">
+				<input type="radio" name="slide" id="s2">
+				<label for="s2" class="botton"><img src="images/img22.jpg"></label>
+				<div class="content">
+					<img src="images/img2.jpg" alt="Изображение 2">
+				</div>
+			</div>
+
+			<div class="tab">
+				<input type="radio" name="slide" id="s3">
+				<label for="s3" class="botton"><img src="images/img33.jpg"></label>
+				<div class="content">
+					<img src="images/img3.jpg" alt="Изображение 3">
+				</div>
+			</div>
+
+			<div class="tab">
+				<input type="radio" name="slide" id="s4">
+				<label for="s4" class="botton"><img src="images/img44.jpg"></label>
+				<div class="content">
+					<img src="images/img4.jpg" alt="Изображение 4">
+				</div>
+			</div>
+
+			<div class="tab">
+				<input type="radio" name="slide" id="s5">
+				<label for="s5" class="botton"><img src="images/img55.jpg"></label>
+				<div class="content">
+					<img src="images/img5.jpg" alt="Изображение 5">
+				</div>
+			</div>
+		
+		</div>
+		
+		
+<!-- Коментарий -->
+	</body>
+</html>
